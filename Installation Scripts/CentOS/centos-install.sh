@@ -113,7 +113,8 @@ cd Eclipse/
 mv ~/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz ~/Eclipse
 tar xf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 chown -R $USER:$USER eclipse-jee-neon-2-linux-gtk-x86_64
-rm ~/eclipse-jee-neon-2-linux-gtk-x86_64
+cd ~
+rm eclipse-jee-neon-2-linux-gtk-x86_64
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
