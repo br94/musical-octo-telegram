@@ -74,7 +74,8 @@ yum install -yy ntfs*
 #Installs MSFonts
 echo '(9/18) Installing MS Fonts...'
 yum install -yy curl cabextract xorg-x11-font-utils fontconfig
-rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+wget --no-check-certificate "https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm"
+yum localinstall -yy msttcore-fonts-installer-2.6-1.noarch.rpm
 
 #Remove and Reinstall Docker
 echo '(10/18) Removing old docker installation...'
