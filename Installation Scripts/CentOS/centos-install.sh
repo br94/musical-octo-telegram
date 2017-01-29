@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd ~
+#Run Script as sudo with your username as first parameter
+#e.g. sudo sh centos-install.sh $USER
+USER=$1
+cd /home/$USER
 
 #Updates the System
 echo '(1/18) Update system...'
@@ -103,23 +106,18 @@ yum install -yy svn
 
 #Downloading and Installing Eclipse for Java EE
 echo '(15/18) Downloading and installing Eclipse IDE...'
-wget "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz" -P ~/
+wget "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz"
 echo 'Download completed.. Starting installation...'
-mkdir ~/Eclipse
-cd ~/Eclipse/
-mv ~/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz ~/Eclipse
+
 tar xf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 chown -R $USER:$USER eclipse-jee-neon-2-linux-gtk-x86_64
 rm eclipse-jee-neon-2-linux-gtk-x86_64
-cd ~
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
 yum install -yy maven
 
 #Installing Skype for Linux ALPHA
-echo '(17/18) Downloading and installing skype f
-
 echo '(17/18) Downloading and installing skype for linux alpha...'
 wget "https://go.skype.com/skypeforlinux-64-alpha.rpm"
 yum localinstall -yy skypeforlinux-64-alpha.rpm
