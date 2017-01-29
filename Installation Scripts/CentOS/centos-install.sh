@@ -55,7 +55,7 @@ echo -e '<?xml version="1.0"?>
 </fontconfig>' >> .fonts.conf
 
 echo '(5/18) Changing Owner of fonts.conf to $USER...'
-chown -v centos ~/.fonts.conf
+chown -v $USER ~/.fonts.conf
 
 #Enables Font Fixes
 echo '(6/18) Enable font fixes...'
