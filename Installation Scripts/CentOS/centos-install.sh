@@ -106,10 +106,14 @@ echo '(14/18) Installing svn...'
 yum install -yy svn
 
 #Downloads Java from the oracle page
-echo '(15/18) Downloading and installing Java 8u121 JDK...'
-wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm"
-
-yum localinstall -yy jdk-8u121-linux-x64.rpm
+echo '(15/18) Downloading and installing Eclipse IDE...'
+wget "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz"
+mkdir Eclipse
+cd Eclipse/
+mv ~/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz ~/Eclipse
+tar xf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
+chown -R $USER:$USER eclipse-jee-neon-2-linux-gtk-x86_64
+rm ~/eclipse-jee-neon-2-linux-gtk-x86_64
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
@@ -121,7 +125,6 @@ wget "https://go.skype.com/skypeforlinux-64-alpha.rpm"
 yum localinstall -yy skypeforlinux-64-alpha.rpm
 
 #Removes installed .rpm files
-rm -f jdk-8u121-linux-x64.rpm
 rm -f skypeforlinux-64-alpha.rpm
 
 echo '(18/18) Final Update and Clean-up...'
