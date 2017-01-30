@@ -66,8 +66,10 @@ sudo apt update -y
 sudo apt install skypeforlinux -y
 
 
+echo "vm.swappiness = 10" | sudo tee /etc/sysctl.conf
+
 echo '(18/18) Final Update and Clean-up...'
-sudo apt update -y
+sudo apt update -yy
 
 echo 'Everything done! Please reboot'
 
