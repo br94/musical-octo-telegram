@@ -28,25 +28,26 @@ sudo add-apt-repository \
        main"
 sudo apt update -yy
 
-$ sudo apt -y install docker-engine
+sudo apt -y install docker-engine
 
 #Create usergroup to access docker without sudo
 echo '(11/18) Granting $USER right to user docker...'
-groupadd docker
-usermod -aG docker $USER
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
-echo '(12/18) Start docker on boot...'
-systemctl enable docker
+#If you want, uncomment this
+#echo '(12/18) Start docker on boot...'
+#sudo systemctl enable docker
 
 echo '(13/18) Installing git and svn...'
-sudo apt install -yy git svn
+sudo apt install -yy git subversion
 
 #Downloads Java from the oracle page
 sudo apt install -yy openjdk-8-jre icedtea-8-plugin openjdk-8-jdk openjdk-8-demo openjdk-8-doc openjdk-8-jre-headless openjdk-8-source 
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
-yum install -yy maven
+sudo apt install -yy maven
 
 echo '(15/18) Downloading and installing Eclipse IDE...'
 wget "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz"
@@ -54,7 +55,7 @@ echo 'Download completed.. Starting installation...'
 
 tar xf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 chown -R $USER:$USER eclipse
-ln -s /home/$USER/eclipse/eclipse /usr/local/bin/eclipse
+sudo ln -s /home/$USER/eclipse/eclipse /usr/local/bin/eclipse
 
 rm eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 
