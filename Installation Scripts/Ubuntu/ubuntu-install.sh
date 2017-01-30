@@ -47,7 +47,7 @@ echo '(13/18) Installing git and svn...'
 sudo apt install -yy git subversion
 
 #Downloads Java from the oracle page
-sudo apt install -yy openjdk-8-jre icedtea-8-plugin openjdk-8-jdk openjdk-8-demo openjdk-8-doc openjdk-8-jre-headless openjdk-8-source 
+sudo apt install -y default-jdk
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
