@@ -7,7 +7,7 @@ echo '(1/18) Update system...'
 sudo apt update -yy
 
 #Install gdebi and htop
-sudo apt´ install -yy gdebi htop
+sudo apt install -yy gdebi htop
 
 #Installs MSFonts
 echo '(9/18) Installing Fonts...'
