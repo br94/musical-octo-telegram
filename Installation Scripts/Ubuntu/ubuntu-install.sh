@@ -4,21 +4,21 @@ cd ~
 
 #Updates the System
 echo '(1/18) Update system...'
-sudo apt-get update -yy
+sudo apt update -yy
 
 #Install gdebi and htop
-sudo apt-get install -yy gdebi htop
+sudo apt´ install -yy gdebi htop
 
 #Installs MSFonts
 echo '(9/18) Installing Fonts...'
-sudo apt-get install -yy fonts-liberation lmodern cm-super fonts-cmu fonts-ebgaramond fonts-ebgaramond-extra fonts-sil-gentium fonts-sil-gentium-basic fonts-linuxlibertine tex-gyre ttf-dejavu ttf-ubuntu-font-family fonts-ubuntu-font-family-console 
+sudo apt install -yy fonts-liberation lmodern cm-super fonts-cmu fonts-ebgaramond fonts-ebgaramond-extra fonts-sil-gentium fonts-sil-gentium-basic fonts-linuxlibertine tex-gyre ttf-dejavu ttf-ubuntu-font-family fonts-ubuntu-font-family-console 
 
 #Remove and Reinstall Docker
 echo '(10/18) Installing new docker installation...'
-sudo apt-get install -yy curl \
+sudo apt install -yy curl \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
-sudo apt-get install -yy apt-transport-https \
+sudo apt install -yy apt-transport-https \
                        ca-certificates
 curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
 
@@ -26,9 +26,9 @@ sudo add-apt-repository \
        "deb https://apt.dockerproject.org/repo/ \
        ubuntu-$(lsb_release -cs) \
        main"
-sudo apt-get update -yy
+sudo apt update -yy
 
-$ sudo apt-get -y install docker-engine
+$ sudo apt -y install docker-engine
 
 #Create usergroup to access docker without sudo
 echo '(11/18) Granting $USER right to user docker...'
@@ -39,10 +39,10 @@ echo '(12/18) Start docker on boot...'
 systemctl enable docker
 
 echo '(13/18) Installing git and svn...'
-sudo apt-get install -yy git svn
+sudo apt install -yy git svn
 
 #Downloads Java from the oracle page
-sudo apt-get install -yy openjdk-8-jre icedtea-8-plugin openjdk-8-jdk openjdk-8-demo openjdk-8-doc openjdk-8-jre-headless openjdk-8-source 
+sudo apt install -yy openjdk-8-jre icedtea-8-plugin openjdk-8-jdk openjdk-8-demo openjdk-8-doc openjdk-8-jre-headless openjdk-8-source 
 
 #Installing Apache Maven
 echo '(16/18) Installing maven...'
