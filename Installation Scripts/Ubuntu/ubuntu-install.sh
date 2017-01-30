@@ -11,7 +11,7 @@ sudo apt´ install -yy gdebi htop
 
 #Installs MSFonts
 echo '(9/18) Installing Fonts...'
-sudo apt install -yy fonts-liberation lmodern cm-super fonts-cmu fonts-ebgaramond fonts-ebgaramond-extra fonts-sil-gentium fonts-sil-gentium-basic fonts-linuxlibertine tex-gyre ttf-dejavu ttf-ubuntu-font-family fonts-ubuntu-font-family-console 
+sudo apt install -yy fonts-liberation lmodern cm-super fonts-cmu fonts-ebgaramond fonts-ebgaramond-extra fonts-sil-gentium fonts-sil-gentium-basic fonts-linuxlibertine ttf-dejavu ttf-ubuntu-font-family fonts-ubuntu-font-family-console 
 
 #Remove and Reinstall Docker
 echo '(10/18) Installing new docker installation...'
