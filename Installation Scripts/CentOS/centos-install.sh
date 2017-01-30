@@ -112,6 +112,8 @@ echo 'Download completed.. Starting installation...'
 
 tar xf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 chown -R $USER:$USER eclipse
+ln -s /home/$USER/eclipse/eclipse /usr/local/bin/eclipse
+
 rm eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 
 #Installing Apache Maven
@@ -120,11 +122,8 @@ yum install -yy maven
 
 #Installing Skype for Linux ALPHA
 echo '(17/18) Downloading and installing skype for linux alpha...'
-wget "https://go.skype.com/skypeforlinux-64-alpha.rpm"
-yum localinstall -yy skypeforlinux-64-alpha.rpm
-
-#Removes installed .rpm files
-rm -f skypeforlinux-64-alpha.rpm
+yum-config-manager --add-repo=https://repo.skype.com/data/skype-stable.repo
+yum install skypeforlinux -y
 
 echo '(18/18) Final Update and Clean-up...'
 yum update -yy
