@@ -67,14 +67,14 @@ rm eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
 sudo apt install apt-transport-https -y
 curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -
 echo "deb https://repo.skype.com/deb stable main" | sudo tee /etc/apt/sources.list.d/skypeforlinux.list
-sudo apt update -y
+sudo apt update -yy
 sudo apt install skypeforlinux -y
 
 
 echo "vm.swappiness = 10" | sudo tee /etc/sysctl.conf
 
 echo '(18/18) Final Update and Clean-up...'
-sudo apt update -yy
+sudo apt full-upgrade -yy
 
 echo 'Everything done! Please reboot'
 
