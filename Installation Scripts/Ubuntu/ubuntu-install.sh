@@ -13,9 +13,11 @@ sudo apt install -yy gdebi htop
 echo '(9/18) Installing Fonts...'
 sudo apt install -yy fonts-liberation fonts-linuxlibertine ttf-dejavu fonts-ubuntu-font-family-console 
 
-wget http://ftp.de.debian.org/debian/pool/contrib/m/msttcorefonts/ttf-mscorefonts-installer_3.6_all.deb
-sudo gdebi --n ttf-mscorefonts-installer_3.6_all.deb
-rm ttf-mscorefonts-installer_3.6_all.deb
+#XUBUNTU ONLY
+sudo apt install xubuntu-restricted-extras -yy
+
+#Activates the Firewall
+sudo ufw enable
 
 #Remove and Reinstall Docker
 echo '(10/18) Installing new docker installation...'
