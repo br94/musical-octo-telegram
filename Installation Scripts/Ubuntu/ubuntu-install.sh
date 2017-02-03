@@ -20,7 +20,7 @@ sudo apt install xubuntu-restricted-extras -yy
 #Installing Numix Circle Icons and Wallpaper
 sudo add-apt-repository ppa:numix/ppa -yy
 sudo apt update -yy
-sudo apt install numix-icon-theme-circle numix-wallpaper-* -yy
+sudo apt install numix-icon-theme-circle -yy
 sudo add-apt-repository --remove ppa:numix/ppa -yy
 
 #Activates the Firewall
