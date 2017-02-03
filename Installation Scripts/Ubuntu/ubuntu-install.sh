@@ -5,6 +5,7 @@ cd ~
 #Updates the System
 echo '(1/18) Update system...'
 sudo apt update -yy
+sudo apt full-upgrade -yy
 
 #Install gdebi and htop
 sudo apt install -yy gdebi htop
@@ -15,6 +16,12 @@ sudo apt install -yy fonts-liberation fonts-linuxlibertine ttf-dejavu fonts-ubun
 
 #XUBUNTU ONLY
 sudo apt install xubuntu-restricted-extras -yy
+
+#Installing Numix Circle Icons and Wallpaper
+sudo add-apt-repository ppa:numix/ppa -yy
+sudo apt update -yy
+sudo apt install numix-icon-theme-circle numix-wallpaper-* -yy
+sudo add-apt-repository --remove ppa:numix/ppa -yy
 
 #Activates the Firewall
 sudo ufw enable
