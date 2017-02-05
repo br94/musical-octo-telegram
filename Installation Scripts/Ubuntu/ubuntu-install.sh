@@ -35,6 +35,10 @@ sudo apt install numix-gtk-theme
 gsettings set org.gnome.desktop.interface gtk-theme "Numix"
 gsettings set org.gnome.desktop.wm.preferences theme "Numix"
 
+#Download Google Chrome
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+sudo gdebi google-chrome-stable_current_amd64.deb -yy
+rm google-chrome-stable_current_amd64.deb
 
 #Activates the Firewall
 sudo ufw enable
