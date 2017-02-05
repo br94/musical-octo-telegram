@@ -14,14 +14,27 @@ sudo apt install -yy gdebi htop
 echo '(9/18) Installing Fonts...'
 sudo apt install -yy fonts-liberation fonts-linuxlibertine ttf-dejavu fonts-ubuntu-font-family-console 
 
-#XUBUNTU ONLY
-sudo apt install xubuntu-restricted-extras -yy
+#UBUNTU AND OFFICIAL SPINS MATE & GNOME
+sudo apt install ubuntu-restricted-extras -yy
+
+#KUBUNTU
+#sudo apt install kubuntu-restricted-extras -yy
+
+#LUBUNTU
+#sudo apt install lubuntu-restricted-extras -yy
+
+#XUBUNTU
+#sudo apt install xubuntu-restricted-extras -yy
 
 #Installing Numix Circle Icons and Wallpaper
 sudo add-apt-repository ppa:numix/ppa -yy
 sudo apt update -yy
 sudo apt install numix-icon-theme-circle -yy
-sudo add-apt-repository --remove ppa:numix/ppa -yy
+sudo apt install numix-gtk-theme
+
+gsettings set org.gnome.desktop.interface gtk-theme "Numix"
+gsettings set org.gnome.desktop.wm.preferences theme "Numix"
+
 
 #Activates the Firewall
 sudo ufw enable
