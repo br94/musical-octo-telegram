@@ -30,7 +30,8 @@ sudo apt install ubuntu-restricted-extras -yy
 sudo add-apt-repository ppa:numix/ppa -yy
 sudo apt update -yy
 sudo apt install numix-icon-theme-circle -yy
-sudo apt install numix-gtk-theme
+sudo apt install numix-gtk-theme -yy
+sudo apt install numix-icon-theme-square -yy
 
 gsettings set org.gnome.desktop.interface gtk-theme "Numix"
 gsettings set org.gnome.desktop.wm.preferences theme "Numix"
@@ -41,7 +42,7 @@ sudo gdebi google-chrome-stable_current_amd64.deb -yy
 rm google-chrome-stable_current_amd64.deb
 
 #Download GRsync
-sudo apt install grsync
+sudo apt install grsync -yy
 
 #Activates the Firewall
 sudo ufw enable
