@@ -38,7 +38,7 @@ gsettings set org.gnome.desktop.wm.preferences theme "Numix"
 
 #Download Google Chrome
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-sudo gdebi google-chrome-stable_current_amd64.deb -yy
+sudo gdebi google-chrome-stable_current_amd64.deb -n
 rm google-chrome-stable_current_amd64.deb
 
 #Download GRsync
