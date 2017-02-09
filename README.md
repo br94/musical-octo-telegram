@@ -20,3 +20,4 @@ How to install the Themes?
 3) Copy both files in "Mate Tweak Panel Layout" to '/usr/share/mate-panel/layouts'
 4) Log out and back in
 5) Open Appearance and set Theme to "Numix"
+
